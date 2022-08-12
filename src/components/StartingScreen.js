@@ -11,7 +11,9 @@ export const StartingScreen = ({setBegin}) => {
         let screenElement = document.getElementById('startingScreen-container');
         screenElement.addEventListener('click', () => setBegin(true));
 
-        return screenElement.removeEventListener('click', () => setBegin(true)); 
+        return () => {
+            screenElement.removeEventListener('click', () => setBegin(true));
+        } 
     },[]);
 
     const iconStyle = {

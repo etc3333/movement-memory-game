@@ -5,13 +5,15 @@ import React from "react";
 export const RightPanel = React.memo(() => {
     const allCircleRadius = 20;
 
+    //needs to be changed to fit all types of screen HARD CODED MUST FIX THIS --------------------------------
     const boxDimensions = {height: 800, width: 700, xCorner: 523, yCorner: 85};
     let circleData = { 
         x: rdmNumber(boxDimensions.xCorner, boxDimensions.xCorner + boxDimensions.width - allCircleRadius), 
         y: rdmNumber(boxDimensions.yCorner, boxDimensions.yCorner + boxDimensions.height - allCircleRadius), 
         xSpeed: rdmNumber(-5,5), 
         ySpeed: rdmNumber(-5,5), 
-        radius: allCircleRadius
+        radius: allCircleRadius,
+        correct: true
     };
 
     let circleDataTwo = { 
@@ -19,7 +21,8 @@ export const RightPanel = React.memo(() => {
         y: rdmNumber(boxDimensions.yCorner, boxDimensions.yCorner + boxDimensions.height - allCircleRadius), 
         xSpeed: rdmNumber(-5,5), 
         ySpeed: rdmNumber(-5,5), 
-        radius: allCircleRadius
+        radius: allCircleRadius,
+        correct: false
     };
 
     let circleDataArray = [circleData, circleDataTwo];

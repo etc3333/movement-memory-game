@@ -25,25 +25,24 @@ export function updateCircleLocation(divCircleRef, circleData, boxDimensions) {
 };
 
 export function hideCircle(index) {
-    document.getElementById(index).style.backgroundColor = "pink";
-}
-
-export function clickCircle(e) {
-    e.target.style.backgroundColor = "red";
+    document.getElementById(index).style.backgroundColor = "orange";
 }
 
 export function createCircle(data, index) {
+
+    const color = data.correct ? "green" : "orange";
+
     const circleStyle = {
         width: data.radius + "px",
         height: data.radius + "px",
         borderRadius: "50%",
-        backgroundColor: "orange",
+        backgroundColor: color,
         position: "absolute",
         top: data.y + "px",
         left: data.x + "px"
     }
     return (
-    <div key={index} id={index} style={circleStyle}>
+    <div key={index} data-correct={data.correct} id={index} style={circleStyle}>
 
     </div>
     )
