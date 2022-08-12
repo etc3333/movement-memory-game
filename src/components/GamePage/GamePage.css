@@ -1,0 +1,22 @@
+#title-page-format {
+    display: flex;
+    height: 100vh;
+}
+
+#right-panel {
+    background-color: rgb(10, 78, 100);
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#left-panel {
+    background-color: lightcoral;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import { StartingScreen } from './components/StartingScreen';
+import { GamePage } from './components/GamePage/GamePage';
+
+import { useState } from 'react';
+
 import './App.css';
 
 function App() {
+
+  const [begin, setBegin] = useState(false);
+
+/*   const boxDimensions = {height: 800, width: 700, xCorner: 0, yCorner: 0};
+  let circleData = { x: 90, y: 60, xSpeed: 5, ySpeed: 2, radius: 20 };
+  let circleDataTwo = { x: 310, y: 110, xSpeed: 1, ySpeed: 3, radius: 20 };
+
+  let circleDataArray = [circleData, circleDataTwo];
+  //<Canvas boxDimensions={boxDimensions} circleDataArray={circleDataArray}/>   */
+  //<GamePage />
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+       {begin ? <GamePage /> : <StartingScreen setBegin={setBegin}/>}
     </div>
   );
 }

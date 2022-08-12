@@ -1,0 +1,17 @@
+#startingScreen-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: green;
+}
+
+#starting-screen-text-description {
+    font-style: italic;
+}
+
+#start-game-text {
+    font-size: larger;
+    margin-top: 50px;
+}
