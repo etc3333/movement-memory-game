@@ -34,20 +34,27 @@ export const Canvas = ({boxDimensions, circleDataArray})  => {
         }
     };
 
-    function clickCircle(e) {
-        //dataset.correct is a string
-        if (e.target.dataset.correct === "true") {
-            e.target.style.backgroundColor = "green";
-            setGameData(prev => ({...prev, level: 2}));
-        } else {
-            e.target.style.backgroundColor = "red";
-        }
-    }
+
 
     useEffect(() => {
 
-/*         console.log(document.getElementById('box-container').offsetTop);
+        /*         console.log(document.getElementById('box-container').offsetTop);
         console.log(document.getElementById('box-container').offsetLeft); */
+
+        function clickCircle(e) {
+            //dataset.correct is a string
+            if (e.target.dataset.correct === "true") {
+                if (e.target.style.backgroundColor === "orange") {
+                    e.target.style.backgroundColor = "green";
+                    setGameData(prev => ({...prev, ballsCorrectCounter: (prev.ballsCorrectCounter + 1)}));
+                }
+            } else {
+                if (e.target.style.backgroundColor === "orange") {
+                    e.target.style.backgroundColor = "red";
+                    setGameData(prev => ({...prev, lives: (prev.lives - 1)}));
+                } 
+            }
+        }
 
         setTimeout(() => {
             for (let i = 0; i < amountOfCircles; i++) {
@@ -75,7 +82,7 @@ export const Canvas = ({boxDimensions, circleDataArray})  => {
         return (() => {
             cancelAnimationFrame(requestIdRef.current);
             for (let i = 0; i < amountOfCircles; i++) {
-                document.getElementById(i).addEventListener("click", e => clickCircle(e));
+                document.getElementById(i).removeEventListener("click", e => clickCircle(e));
             }
         });
 

@@ -23,7 +23,7 @@ export const DataInfo = () => {
                     Lives
                 </div>
                 <div>
-                    1
+                    {gameData.lives}
                 </div>
             </div>
             <div>
@@ -31,7 +31,7 @@ export const DataInfo = () => {
                     Balls Present
                 </div>
                 <div>
-                    2
+                    {gameData.ball}
                 </div>
             </div>
             <div>
@@ -39,7 +39,10 @@ export const DataInfo = () => {
                     Highest Level Achieved
                 </div>
                 <div>
-                    3
+                    {gameData.highScore}
+                </div>
+                <div>
+                    ballcorrect: {gameData.ballsCorrectCounter}
                 </div>
             </div>
         </div>

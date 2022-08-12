@@ -10,7 +10,10 @@ export const GameData = createContext();
 export const GamePage = () => {
     const [gameData, setGameData] = useState({
         level: 1,
-        ball: 2
+        ball: 2,
+        lives: 3,
+        highScore: 5,
+        ballsCorrectCounter: 0
     });
 
 
