@@ -50,6 +50,10 @@ export const Canvas = ({boxDimensions, circleDataArray})  => {
                 }
             } else {
                 if (e.target.style.backgroundColor === "orange") {
+                    //removeEventListener here because cleanup effect cannot use getelementbyid
+                    for (let i = 0; i < amountOfCircles; i++) {
+                        document.getElementById(i).removeEventListener("click", clickCircle);
+                    }
                     e.target.style.backgroundColor = "red";
                     setGameData(prev => ({...prev, lives: (prev.lives - 1)}));
                 } 
@@ -81,9 +85,6 @@ export const Canvas = ({boxDimensions, circleDataArray})  => {
 
         return (() => {
             cancelAnimationFrame(requestIdRef.current);
-            for (let i = 0; i < amountOfCircles; i++) {
-                document.getElementById(i).removeEventListener("click", clickCircle);
-            }
         });
 
     }, []);
