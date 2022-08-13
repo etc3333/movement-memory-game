@@ -1,17 +1,16 @@
-import { StartingScreen } from './components/StartingScreen';
-import { GamePage } from './components/GamePage/GamePage';
+import { RenderComponent } from './components/RenderComponent';
 
 import { useState } from 'react';
 
 import './App.css';
 
 function App() {
-
   const [begin, setBegin] = useState(false);
+  const [end, setEnd] = useState(false);
 
   return (
     <div>
-       {begin ? <GamePage /> : <StartingScreen setBegin={setBegin}/>}
+      <RenderComponent begin={begin} setBegin={setBegin} end={end} setEnd={setEnd}/>
     </div>
   );
 }

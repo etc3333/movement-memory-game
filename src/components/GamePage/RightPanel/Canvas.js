@@ -58,7 +58,7 @@ export const Canvas = ({boxDimensions, circleDataArray})  => {
 
         setTimeout(() => {
             for (let i = 0; i < amountOfCircles; i++) {
-                document.getElementById(i).addEventListener("click", e => clickCircle(e));
+                document.getElementById(i).addEventListener("click", clickCircle);
             }
             
             for (let i = 0; i < amountOfCorrectCircles; i++) {
@@ -82,12 +82,12 @@ export const Canvas = ({boxDimensions, circleDataArray})  => {
         return (() => {
             cancelAnimationFrame(requestIdRef.current);
             for (let i = 0; i < amountOfCircles; i++) {
-                document.getElementById(i).removeEventListener("click", e => clickCircle(e));
+                document.getElementById(i).removeEventListener("click", clickCircle);
             }
         });
 
     }, []);
-//this is a testing branch
+
     return (
         <div id="box-container" style={boxStyle}>
             {renderCircle}
