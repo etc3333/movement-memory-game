@@ -2,8 +2,11 @@ import { useContext } from 'react';
 import { GameData } from '../GamePage';
 
 export const DataInfo = () => {
-
     const {gameData} = useContext(GameData);
+
+    if (gameData.lives == 0) {
+        
+    }
     
     return (
         <div>
