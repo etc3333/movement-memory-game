@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 import { AiTwotoneCheckCircle } from 'react-icons/ai';
 import { FiWind } from 'react-icons/fi';
@@ -6,13 +6,15 @@ import { FiWind } from 'react-icons/fi';
 import './StartingScreen.css';
 
 export const StartingScreen = ({setBegin}) => {
-   
+    const startingScreenRef = useRef(null);
+
+
     useEffect(() => {
-        let screenElement = document.getElementById('startingScreen-container');
-        screenElement.addEventListener('click', () => setBegin(true));
+        const startScreenElement = startingScreenRef.current;
+        startScreenElement.addEventListener('click', setBegin);
 
         return () => {
-            screenElement.removeEventListener('click', () => setBegin(true));
+            startScreenElement.removeEventListener('click', setBegin);
         } 
     },[]);
 
@@ -21,7 +23,7 @@ export const StartingScreen = ({setBegin}) => {
     }
 
     return (
-        <div id="startingScreen-container">
+        <div ref={startingScreenRef} id="startingScreen-container">
             <div>
                 <div>
                     <div>
