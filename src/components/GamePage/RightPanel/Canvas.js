@@ -2,7 +2,7 @@ import { useEffect, useRef, useContext } from 'react';
 import { updateCircleLocation, hideCircle, createCircle } from '../../functions/circleFunctions';
 
 import './Canvas.css';
-
+//hello
 import { GameData } from '../GamePage';
 
 export const Canvas = ({boxDimensions, circleDataArray})  => {
