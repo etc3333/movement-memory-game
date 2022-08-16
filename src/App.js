@@ -1,6 +1,6 @@
 import { RenderComponent } from './components/RenderComponent';
 
-import { useState } from 'react';
+import { useState, createContext } from 'react';
 
 
 import { EndingScreen } from './components/EndingScreen.js';
