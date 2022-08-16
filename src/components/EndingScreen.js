@@ -4,7 +4,7 @@ export const EndingScreen = () => {
     return (
         <div id="endingScreen-container">
             <div id="endingScreen-centerBox">
-                helloe fafa f 
+                helloe 
             </div>
         </div>
     )
