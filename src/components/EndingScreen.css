@@ -1,0 +1,10 @@
+#endingScreen-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#endingScreen-centerBox {
+    background-color: #F7B15C;
+}

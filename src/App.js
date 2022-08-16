@@ -2,6 +2,10 @@ import { RenderComponent } from './components/RenderComponent';
 
 import { useState } from 'react';
 
+
+import { EndingScreen } from './components/EndingScreen.js';
+
+
 import './App.css';
 
 function App() {
@@ -11,6 +15,7 @@ function App() {
 
           /*         console.log(document.getElementById('box-container').offsetTop);
         console.log(document.getElementById('box-container').offsetLeft); */
+        
         
   return (
     <div>
