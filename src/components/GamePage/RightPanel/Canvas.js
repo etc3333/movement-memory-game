@@ -79,7 +79,6 @@ export const Canvas = ({boxDimensions, circleDataArray, setNextLevel, numberOfCo
                 if (e.target.style.backgroundColor === "orange") {
                     e.target.style.backgroundColor = "red";
                     setGameData(prev => ({...prev, lives: (prev.lives - 1)}));
-                    console.log(gameData.lives);
                 } 
             }
         }
