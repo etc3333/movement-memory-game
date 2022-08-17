@@ -5,6 +5,28 @@
     height: 100vh;
 }
 
-#endingScreen-centerBox {
+#endingScreen-centerBox-container {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
     background-color: #F7B15C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#endingScreen-centerBox {
+    text-align: center;
+}
+
+#endingScreen-outerRing {
+    height: 550px;
+    width: 550px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 10px solid red;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

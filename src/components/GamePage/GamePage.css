@@ -13,8 +13,19 @@
 }
 
 #left-panel {
-    background-color: lightcoral;
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#leftPanel-centerBox {
+    border-radius: 50%;
+    --radius: 400px;
+    width: var(--radius);
+    height: var(--radius);
+    background-color: lightcoral;
     display: flex;
     justify-content: center;
     align-items: center;

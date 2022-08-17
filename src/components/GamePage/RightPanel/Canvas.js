@@ -3,7 +3,7 @@ import { updateCircleLocation } from '../../functions/circleFunctions';
 
 import './Canvas.css';
 
-import { GameData } from '../GamePage';
+import { GameData } from '../../../App.js';
 
 export const Canvas = ({boxDimensions, circleDataArray})  => {
     const requestFrameRef = useRef(null);   
@@ -13,7 +13,6 @@ export const Canvas = ({boxDimensions, circleDataArray})  => {
     const amountOfCorrectCircles = 1;
     const amountOfCircles = 2;
     
-
     const boxStyle = {
         width: boxDimensions.width + "px",
         height: boxDimensions.height + "px",

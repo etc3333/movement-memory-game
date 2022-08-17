@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { GameData } from '../GamePage';
+import { GameData } from '../../../App.js';
 
 export const DataInfo = () => {
     const {gameData} = useContext(GameData);
