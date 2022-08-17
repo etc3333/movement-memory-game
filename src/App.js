@@ -14,10 +14,8 @@ function App() {
 
   const [gameData, setGameData] = useState({
       level: 1,
-      ball: 2,
       lives: 3,
-      highScore: 5,
-      ballsCorrectCounter: 0
+      highScore: 5
   });
 
 

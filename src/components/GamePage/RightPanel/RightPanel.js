@@ -1,9 +1,15 @@
 import { Canvas } from "./Canvas";
 import { rdmNumber } from "../../functions/rdmNumber";
+import { useState } from "react";
 import React from "react";
 
 export const RightPanel = React.memo(() => {
+
+    const [nextLevel, setNextLevel] = useState(0);
+
     const allCircleRadius = 20;
+    const numberOfCorrectCircles = 1;
+
 
     //needs to be changed to fit all types of screen HARD CODED MUST FIX THIS --------------------------------
     const boxDimensions = {height: 800, width: 700, xCorner: 523, yCorner: 85};
@@ -28,7 +34,7 @@ export const RightPanel = React.memo(() => {
     circleDataArray[0].correct = true;
     return (
         <div>
-            <Canvas boxDimensions={boxDimensions} circleDataArray={circleDataArray}/>  
+            <Canvas key={nextLevel} boxDimensions={boxDimensions} circleDataArray={circleDataArray} setNextLevel={setNextLevel} numberOfCorrectCircles={numberOfCorrectCircles} />  
         </div>
     )
 });

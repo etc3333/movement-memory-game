@@ -23,22 +23,24 @@ export const StartingScreen = ({setBegin}) => {
     }
 
     return (
-        <div ref={startingScreenRef} id="startingScreen-container">
-            <div>
+        <div id="startingScreen-container">
+            <div ref={startingScreenRef} id="startingScreen-centerBox-container">
                 <div>
                     <div>
-                        Movement Memory Test
+                        <div>
+                            Movement Memory Test
+                        </div>
+                        <div id="starting-screen-text-description">
+                            Remember the Designated Circles
+                        </div>
                     </div>
-                    <div id="starting-screen-text-description">
-                        Remember the Designated Circles
+                    <div>
+                        <AiTwotoneCheckCircle style={iconStyle}/>
+                        <FiWind style={iconStyle}/>
                     </div>
-                </div>
-                <div>
-                    <AiTwotoneCheckCircle style={iconStyle}/>
-                    <FiWind style={iconStyle}/>
-                </div>
-                <div id='start-game-text'>
-                    Click to Start Game
+                    <div id='start-game-text'>
+                        Click to Start Game
+                    </div>
                 </div>
             </div>
         </div>

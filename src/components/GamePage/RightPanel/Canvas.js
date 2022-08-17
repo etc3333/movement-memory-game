@@ -5,14 +5,16 @@ import './Canvas.css';
 
 import { GameData } from '../../../App.js';
 
-export const Canvas = ({boxDimensions, circleDataArray})  => {
+export const Canvas = ({boxDimensions, circleDataArray, setNextLevel, numberOfCorrectCircles})  => {
     const requestFrameRef = useRef(null);   
     const activeUpdateCircle = useRef(false);
     const allCircleRefs = useRef(null);
-    const { setGameData } = useContext(GameData);
+    const { gameData, setGameData } = useContext(GameData);
     const amountOfCorrectCircles = 1;
     const amountOfCircles = 2;
-    
+    let correctCounter = 0;
+
+
     const boxStyle = {
         width: boxDimensions.width + "px",
         height: boxDimensions.height + "px",
@@ -68,12 +70,16 @@ export const Canvas = ({boxDimensions, circleDataArray})  => {
             if (e.target.dataset.correct === "true") {
                 if (e.target.style.backgroundColor === "orange") {
                     e.target.style.backgroundColor = "green";
-                    setGameData(prev => ({...prev, ballsCorrectCounter: (prev.ballsCorrectCounter + 1)}));
+                    correctCounter++;
+                }
+                if (numberOfCorrectCircles == correctCounter) {
+                    setNextLevel(prev => (prev + 1));
                 }
             } else {
                 if (e.target.style.backgroundColor === "orange") {
                     e.target.style.backgroundColor = "red";
                     setGameData(prev => ({...prev, lives: (prev.lives - 1)}));
+                    console.log(gameData.lives);
                 } 
             }
         }
@@ -95,7 +101,6 @@ export const Canvas = ({boxDimensions, circleDataArray})  => {
                 activeUpdateCircle.current = false;
                 console.log("Timeout 2 finished");
             }, 5000);
-
             requestFrameRef.current = requestAnimationFrame(tick);
             
         }, 5000);  
@@ -108,6 +113,10 @@ export const Canvas = ({boxDimensions, circleDataArray})  => {
         };
 
     }, []);
+
+    useEffect(() => {
+        console.log(gameData.lives);
+    },[gameData.lives]);
 
     return (
         <div id="box-container" style={boxStyle}>
