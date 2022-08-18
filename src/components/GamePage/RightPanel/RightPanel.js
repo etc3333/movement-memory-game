@@ -16,9 +16,7 @@ export const RightPanel = React.memo(() => {
     const allCircleRadius = 20;
     const numberOfCorrectCircles = 1;
 
-
-    //needs to be changed to fit all types of screen HARD CODED MUST FIX THIS --------------------------------
-    const boxDimensions = {height: 800, width: 700, xCorner: 523, yCorner: 85};
+    const boxDimensions = {height: 600, width: 500};
     const circleDataTemplate = { 
         x: null,
         y: null,
@@ -34,8 +32,8 @@ export const RightPanel = React.memo(() => {
     function setCircleDataArray() {
         return new Array(2).fill(circleDataTemplate).map(value => {
             return {...value,
-                x: rdmNumber(boxDimensions.xCorner, boxDimensions.xCorner + boxDimensions.width - allCircleRadius), 
-                y: rdmNumber(boxDimensions.yCorner, boxDimensions.yCorner + boxDimensions.height - allCircleRadius), 
+                x: rdmNumber(0, boxDimensions.width - allCircleRadius), 
+                y: rdmNumber(0, boxDimensions.height - allCircleRadius), 
                 xSpeed: rdmNumber(-5,5), 
                 ySpeed: rdmNumber(-5,5)
             }

@@ -1,10 +1,8 @@
-import { useEffect, useRef, useContext } from 'react';
+import { useEffect, useRef } from 'react';
 import { updateCircleLocation } from '../../functions/circleFunctions';
 import React from 'react';
 
 import './Canvas.css';
-
-import { GameData } from '../../../App.js';
 
 export const Canvas = React.memo(({boxDimensions, circleDataArray, setNextLevel, setNextLives, numberOfCorrectCircles}) => {
     const requestFrameRef = useRef(null);   
@@ -60,8 +58,8 @@ export const Canvas = React.memo(({boxDimensions, circleDataArray, setNextLevel,
 
     useEffect(() => {
 
-        console.log(document.getElementById('box-container').offsetTop);
-        console.log(document.getElementById('box-container').offsetLeft); 
+/*         console.log(document.getElementById('box-container').offsetTop);
+        console.log(document.getElementById('box-container').offsetLeft);  */
 
         allCircleRefs.current = document.getElementsByClassName("circle");
         const circleElements = allCircleRefs.current;
@@ -74,7 +72,7 @@ export const Canvas = React.memo(({boxDimensions, circleDataArray, setNextLevel,
                     e.target.style.backgroundColor = "green";
                     correctCounter++;
                 }
-                if (numberOfCorrectCircles == correctCounter) {
+                if (numberOfCorrectCircles === correctCounter) {
                     setNextLevel(prev => (prev + 1));
                 }
             } else {
@@ -118,7 +116,7 @@ export const Canvas = React.memo(({boxDimensions, circleDataArray, setNextLevel,
 
     return (
         <div id="box-container" style={boxStyle}>
-            <div>
+            <div id="box-inner-container">
                 {renderCircle}
             </div>
         </div>
