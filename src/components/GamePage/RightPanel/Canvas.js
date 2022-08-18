@@ -1,16 +1,15 @@
 import { useEffect, useRef, useContext } from 'react';
 import { updateCircleLocation } from '../../functions/circleFunctions';
+import React from 'react';
 
 import './Canvas.css';
 
 import { GameData } from '../../../App.js';
 
-export const Canvas = ({boxDimensions, circleDataArray, setNextLevel, numberOfCorrectCircles})  => {
+export const Canvas = React.memo(({boxDimensions, circleDataArray, setNextLevel, setNextLives, numberOfCorrectCircles}) => {
     const requestFrameRef = useRef(null);   
     const activeUpdateCircle = useRef(false);
     const allCircleRefs = useRef(null);
-    const { gameData, setGameData } = useContext(GameData);
-    const amountOfCorrectCircles = 1;
     const amountOfCircles = 2;
     let correctCounter = 0;
 
@@ -61,6 +60,9 @@ export const Canvas = ({boxDimensions, circleDataArray, setNextLevel, numberOfCo
 
     useEffect(() => {
 
+        console.log(document.getElementById('box-container').offsetTop);
+        console.log(document.getElementById('box-container').offsetLeft); 
+
         allCircleRefs.current = document.getElementsByClassName("circle");
         const circleElements = allCircleRefs.current;
         const circleElementsCopy = [...allCircleRefs.current];  //used for removeventlistener
@@ -78,14 +80,14 @@ export const Canvas = ({boxDimensions, circleDataArray, setNextLevel, numberOfCo
             } else {
                 if (e.target.style.backgroundColor === "orange") {
                     e.target.style.backgroundColor = "red";
-                    setGameData(prev => ({...prev, lives: (prev.lives - 1)}));
+                    setNextLives(prev => (prev -1));
                 } 
             }
         }
 
         setTimeout(() => {
             
-            for (let i = 0; i < amountOfCorrectCircles; i++) {
+            for (let i = 0; i < numberOfCorrectCircles; i++) {
                 hideCircle(i);
             }
 
@@ -99,10 +101,10 @@ export const Canvas = ({boxDimensions, circleDataArray, setNextLevel, numberOfCo
                 }
                 activeUpdateCircle.current = false;
                 console.log("Timeout 2 finished");
-            }, 5000);
+            }, 2000);
             requestFrameRef.current = requestAnimationFrame(tick);
             
-        }, 5000);  
+        }, 2000);  
 
         return () => {
             cancelAnimationFrame(requestFrameRef.current);
@@ -113,13 +115,12 @@ export const Canvas = ({boxDimensions, circleDataArray, setNextLevel, numberOfCo
 
     }, []);
 
-    useEffect(() => {
-        console.log(gameData.lives);
-    },[gameData.lives]);
 
     return (
         <div id="box-container" style={boxStyle}>
-            {renderCircle}
+            <div>
+                {renderCircle}
+            </div>
         </div>
     )
-};
+});

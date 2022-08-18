@@ -14,7 +14,7 @@ function App() {
 
   const [gameData, setGameData] = useState({
       level: 1,
-      lives: 1,
+      lives: 3,
       highScore: 5
   });
 
@@ -29,8 +29,7 @@ function App() {
       }
   },[gameData.lives]);
 
-          /*         console.log(document.getElementById('box-container').offsetTop);
-        console.log(document.getElementById('box-container').offsetLeft); */
+
         
         //<RenderComponent begin={begin} setBegin={setBegin} end={end} setEnd={setEnd}/>
   return (
