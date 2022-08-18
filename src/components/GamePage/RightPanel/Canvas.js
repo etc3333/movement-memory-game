@@ -78,7 +78,7 @@ export const Canvas = React.memo(({boxDimensions, circleDataArray, setNextLevel,
             } else {
                 if (e.target.style.backgroundColor === "orange") {
                     e.target.style.backgroundColor = "red";
-                    setNextLives(prev => (prev -1));
+                    setNextLives(prev => (prev - 1));
                 } 
             }
         }

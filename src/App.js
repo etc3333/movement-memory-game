@@ -34,7 +34,7 @@ function App() {
         //<RenderComponent begin={begin} setBegin={setBegin} end={end} setEnd={setEnd}/>
   return (
     <GameData.Provider value={value}>
-      <RenderComponent begin={begin} setBegin={setBegin} end={end} setEnd={setEnd}/>
+      <RenderComponent begin={begin} setBegin={setBegin} end={end} />
     </GameData.Provider>
   );
 }
