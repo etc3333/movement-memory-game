@@ -4,13 +4,14 @@ import React from 'react';
 
 import './Canvas.css';
 
-export const Canvas = React.memo(({boxDimensions, circleDataArray, setNextLevel, setNextLives, numberOfCorrectCircles}) => {
+export const Canvas = React.memo(({boxDimensions, circleDataArray, stateCallbacks, levelInfo}) => {
     const requestFrameRef = useRef(null);   
     const activeUpdateCircle = useRef(false);
     const allCircleRefs = useRef(null);
-    const amountOfCircles = 2;
+    const {setNextLevel, setNextLives } = stateCallbacks;
+    const {numberOfCorrectCircles, numberOfTotalCircles} = levelInfo;
     let correctCounter = 0;
-
+    
 
     const boxStyle = {
         width: boxDimensions.width + "px",
@@ -94,7 +95,7 @@ export const Canvas = React.memo(({boxDimensions, circleDataArray, setNextLevel,
             console.log("Timeout 1 finished");
 
             setTimeout(() => {
-                for (let i = 0; i < amountOfCircles; i++) {
+                for (let i = 0; i < numberOfTotalCircles; i++) {
                     circleElements[i].addEventListener("click", clickCircle);
                 }
                 activeUpdateCircle.current = false;
@@ -106,7 +107,7 @@ export const Canvas = React.memo(({boxDimensions, circleDataArray, setNextLevel,
 
         return () => {
             cancelAnimationFrame(requestFrameRef.current);
-            for (let i = 0; i < amountOfCircles; i++) {
+            for (let i = 0; i < numberOfTotalCircles; i++) {
                 circleElementsCopy[i].removeEventListener("click", clickCircle);
             } 
         };
