@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 
 import { AiTwotoneCheckCircle } from 'react-icons/ai';
 import { FiWind } from 'react-icons/fi';
@@ -23,7 +24,12 @@ export const StartingScreen = ({setBegin}) => {
     }
 
     return (
-        <div id="startingScreen-container">
+        <motion.div 
+            id="startingScreen-container"
+            initial={{opacity: .3, scale: 0}}
+            animate={{opacity: 1, scale: 1}}
+            transition={{duration: "1.5"}}
+        >
             <div ref={startingScreenRef} id="startingScreen-centerBox-container">
                 <div>
                     <div>
@@ -43,7 +49,7 @@ export const StartingScreen = ({setBegin}) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 
 };

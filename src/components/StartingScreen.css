@@ -6,6 +6,11 @@
     text-align: center;
 }
 
+#startingScreen-container:hover {
+    cursor: default;
+}
+
+
 #starting-screen-text-description {
     font-style: italic;
 }
