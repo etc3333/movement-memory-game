@@ -40,7 +40,7 @@ function App() {
         //<RenderComponent begin={begin} setBegin={setBegin} end={end} setEnd={setEnd}/>
   return (
     <GameData.Provider value={value}>
-      <RenderComponent begin={begin} setBegin={setBegin} end={end} />
+      <RenderComponent begin={begin} setBegin={setBegin} end={end} setEnd={setEnd} />
     </GameData.Provider>
   );
 }

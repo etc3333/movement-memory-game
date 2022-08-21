@@ -1,15 +1,17 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 
 import './EndingScreen.css';
 
 import { GameData } from '../App.js';
 
-export const EndingScreen = () => {
+export const EndingScreen = ({setBegin, setEnd}) => {
 
-    const { gameData } = useContext(GameData);
+    const { gameData, setGameData } = useContext(GameData);
+    const endingCircleRef = useRef();
 
     let newHighScore = false;
     let storedHighScore = "N/A";
+    let score = gameData.level;
 
     if (localStorage.getItem("highScore") === null) {
         localStorage.setItem("highScore", JSON.stringify(gameData.level));
@@ -18,23 +20,27 @@ export const EndingScreen = () => {
         if (gameData.level > storedHighScore) {
             newHighScore = true;
             localStorage.setItem("highScore", JSON.stringify(gameData.level));
+        } else {
+            score = storedHighScore;
         }
     }
 
     useEffect(() => {
         function tryAgain() {
-            
+            setEnd(false);
+            setGameData(prev => ({level: 1, lives: 3, highScore: score}))
         }
 
-        document.getElementById("tryAgain-circle").addEventListener("click", tryAgain);
+        const endCircleRef = endingCircleRef.current;
+        endCircleRef.addEventListener("click", tryAgain);
 
-        return () => document.getElementById("tryAgain-circle").removeEventListener("click", tryAgain);
+        return () => endCircleRef.removeEventListener("click", tryAgain);
     },[]);
 
     return (
         <div id="endingScreen-container">
             <div id='endingScreen-outerRing'>
-                <div id="endingScreen-centerBox-container">
+                <div ref={endingCircleRef} id="endingScreen-centerBox-container">
                     <div id="endingScreen-centerBox">
                         <div>
                             <div>

@@ -27,7 +27,7 @@ export const StartingScreen = ({setBegin}) => {
             id="startingScreen-container"
             initial={{scale: 0}}
             animate={{scale: 1}}
-            transition={{duration: 1.5}}
+            transition={{duration: 1}}
         >
             <div ref={startingScreenRef} id="startingScreen-centerBox-container">
                 <div>
