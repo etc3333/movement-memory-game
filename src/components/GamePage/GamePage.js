@@ -8,10 +8,7 @@ export const GamePage = () => {
 
     return (
         <div id="title-page-format">
-            <div id="left-panel">
-                <LeftPanel />
-            </div>
-            <div id="right-panel">
+            <div id="right-panel-container">
                 <RightPanel />
             </div>
         </div>

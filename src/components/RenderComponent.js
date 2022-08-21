@@ -2,7 +2,6 @@ import { StartingScreen } from './StartingScreen';
 import { GamePage } from './GamePage/GamePage';
 import { EndingScreen } from './EndingScreen';
 
-
 export const RenderComponent = ({begin, setBegin, end}) => {
     if (end) {
       return <EndingScreen />;
@@ -13,7 +12,7 @@ export const RenderComponent = ({begin, setBegin, end}) => {
       );
     } else {
       return (
-        <StartingScreen key="StartingScreen" setBegin={setBegin}/>
+        <StartingScreen setBegin={setBegin}/>
       );
     }
   }

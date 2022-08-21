@@ -58,10 +58,6 @@ export const Canvas = React.memo(({boxDimensions, circleDataArray, stateCallback
     };
 
     useEffect(() => {
-
-/*         console.log(document.getElementById('box-container').offsetTop);
-        console.log(document.getElementById('box-container').offsetLeft);  */
-
         allCircleRefs.current = document.getElementsByClassName("circle");
         const circleElements = allCircleRefs.current;
         const circleElementsCopy = [...allCircleRefs.current];  //used for removeventlistener

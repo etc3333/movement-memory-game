@@ -9,7 +9,6 @@ import './StartingScreen.css';
 export const StartingScreen = ({setBegin}) => {
     const startingScreenRef = useRef(null);
 
-
     useEffect(() => {
         const startScreenElement = startingScreenRef.current;
         startScreenElement.addEventListener('click', setBegin);
@@ -26,9 +25,9 @@ export const StartingScreen = ({setBegin}) => {
     return (
         <motion.div 
             id="startingScreen-container"
-            initial={{opacity: .3, scale: 0}}
-            animate={{opacity: 1, scale: 1}}
-            transition={{duration: "1.5"}}
+            initial={{scale: 0}}
+            animate={{scale: 1}}
+            transition={{duration: 1.5}}
         >
             <div ref={startingScreenRef} id="startingScreen-centerBox-container">
                 <div>

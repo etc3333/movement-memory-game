@@ -1,6 +1,7 @@
 import { Canvas } from "./Canvas";
 import { rdmNumber } from "../../functions/rdmNumber";
 import { useState, useContext, useEffect, useMemo, useRef } from "react";
+import { LeftPanel } from "../LeftPanel/LeftPanel";
 import React from "react";
 
 import { GameData } from "../../../App";
@@ -67,8 +68,11 @@ export const RightPanel = React.memo(() => {
     },[nextLives]);
 
     return (
-        <div>
+        <div id="rightPanel-centerBox">
             <Canvas key={nextLevel} boxDimensions={boxDimensions} circleDataArray={circleDataArray} levelInfo={levelInfo} stateCallbacks={stateCallbacks} />
+            <div id="left-panel-container">
+                <LeftPanel />
+            </div>
         </div>
     )
 });

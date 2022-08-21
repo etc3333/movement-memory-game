@@ -9,7 +9,7 @@ export const DataInfo = () => {
     }
     
     return (
-        <div>
+        <div id="datainfo">
             <div>
                 
             </div>

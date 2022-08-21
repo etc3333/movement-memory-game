@@ -1,31 +1,35 @@
-#title-page-format {
-    display: flex;
+#right-panel-container {
     height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-#right-panel {
+#rightPanel-centerBox {
     background-color: rgb(10, 78, 100);
-    flex: 2;
+    height: 700px;
+    width: 600px;
+    border-radius: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    position: relative;
 }
 
-#left-panel {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+#left-panel-container {
+    position: absolute;
+    top: -5%;
+    left: -10%;
 }
 
 #leftPanel-centerBox {
     border-radius: 50%;
-    --radius: 400px;
+    --radius: 200px;
     width: var(--radius);
     height: var(--radius);
-    background-color: lightcoral;
+    background-color: #F7B15C;
     display: flex;
     justify-content: center;
     align-items: center;
