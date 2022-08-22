@@ -1,7 +1,7 @@
 import { useContext, } from 'react';
 import { RiHeart2Fill } from 'react-icons/ri';
 
-import { GameData } from '../../../App.js';
+import { GameData } from '../../../../App.js';
 
 export const DataInfo = () => {
     const {gameData} = useContext(GameData);

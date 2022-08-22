@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react';
-import { updateCircleLocation } from '../../functions/circleFunctions';
+import { updateCircleLocation } from '../../../functions/circleFunctions';
 import React from 'react';
 
-import './Canvas.css';
+import './Game.css';
 
-export const Canvas = React.memo(({boxDimensions, circleDataArray, stateCallbacks, levelInfo}) => {
+export const Game = React.memo(({boxDimensions, circleDataArray, stateCallbacks, levelInfo}) => {
     const requestFrameRef = useRef(null);   
     const activeUpdateCircle = useRef(false);
     const allCircleRefs = useRef(null);

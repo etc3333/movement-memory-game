@@ -1,12 +1,12 @@
-import { Canvas } from "./Canvas";
+import { Game } from "./Game/Game";
 import { rdmNumber } from "../../functions/rdmNumber";
 import { useState, useContext, useEffect, useMemo, useRef } from "react";
-import { LeftPanel } from "../LeftPanel/LeftPanel";
+import { InGameData } from "./InGameData/InGameData";
 import React from "react";
 
 import { GameData } from "../../../App";
 
-export const RightPanel = React.memo(() => {
+export const GameRendering = React.memo(() => {
 
     const { gameData, setGameData } = useContext(GameData);
     const [nextLevel, setNextLevel] = useState(gameData.level);
@@ -68,10 +68,15 @@ export const RightPanel = React.memo(() => {
     },[nextLives]);
 
     return (
-        <div id="rightPanel-centerBox">
-            <Canvas key={nextLevel} boxDimensions={boxDimensions} circleDataArray={circleDataArray} levelInfo={levelInfo} stateCallbacks={stateCallbacks} />
-            <div id="left-panel-container">
-                <LeftPanel />
+        <div id="gameRendering-centerBox">
+            <Game key={nextLevel} boxDimensions={boxDimensions} circleDataArray={circleDataArray} levelInfo={levelInfo} stateCallbacks={stateCallbacks} />
+            <div id="gameRendering-InGameData">
+                <InGameData />
+            </div>
+            <div id='gameRendering-decoration'>
+                <div id="circle1"/>
+                <div id="circle2"/>
+                <div id="circle3"/>
             </div>
         </div>
     )

@@ -1,4 +1,4 @@
-#right-panel-container {
+#gamePage-container {
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -7,7 +7,7 @@
     text-align: center;
 }
 
-#rightPanel-centerBox {
+#gameRendering-centerBox {
     background-color: #337def;
     border: solid #10489c;
     height: 700px;
@@ -17,15 +17,16 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    box-shadow: 0 0 20px #10489c;
 }
 
-#left-panel-container {
+#gameRendering-InGameData {
     position: absolute;
     top: 15%;
     left: -45%;
 }
 
-#leftPanel-centerBox {
+#inGameData-centerBox {
     border-radius: 50%;
     --radius: 300px;
     border: solid #995a0e;
@@ -36,6 +37,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    box-shadow: 0 0 20px #995a0e;
 }
 
 #dataInfo {
@@ -44,6 +46,58 @@
 }
 
 #title {
-    background-color: pink;
-    font-size: 50px;
+    font-size: 60px;
+    margin-bottom: 40px;
+    background-color: #fcc729;
+    border: solid #995a0e;
+    border-radius: 15px;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 0 0 20px #995a0e;
+}
+
+#gamePage-game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameRendering-decoration {
+    position: absolute;
+    right: -15%;
+    top: 40%;
+}
+
+#circle1, #circle2, #circle3 {
+    border: solid black;
+}
+
+#circle1 {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: orange;
+    top: -80px;
+    box-shadow: 0 0 20px orange;
+}
+
+#circle2 {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: green;
+    top: 15px;
+    box-shadow: 0 0 20px green;
+}
+
+#circle3 {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: red;
+    top: -15px;
+    left: 90px;
+    box-shadow: 0 0 20px red;
 }

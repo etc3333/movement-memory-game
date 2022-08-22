@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-import { AiTwotoneCheckCircle } from 'react-icons/ai';
+import { BsCircleFill } from 'react-icons/bs';
 import { FiWind } from 'react-icons/fi';
 
 import './StartingScreen.css';
@@ -50,7 +50,7 @@ export const StartingScreen = ({setBegin}) => {
                         </div>
                     </div>
                     <div>
-                        <AiTwotoneCheckCircle className='startingScreen-icons'/>
+                        <BsCircleFill className='startingScreen-icons'/>
                         <FiWind className='startingScreen-icons' />
                     </div>
                     <div id='start-game-text'>
