@@ -22,12 +22,12 @@
 #left-panel-container {
     position: absolute;
     top: 15%;
-    left: -30%;
+    left: -45%;
 }
 
 #leftPanel-centerBox {
     border-radius: 50%;
-    --radius: 250px;
+    --radius: 300px;
     border: solid #995a0e;
     width: var(--radius);
     height: var(--radius);
@@ -36,4 +36,14 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+#dataInfo {
+    font-size: 25px;
+    cursor: default;
+}
+
+#title {
+    background-color: pink;
+    font-size: 50px;
 }

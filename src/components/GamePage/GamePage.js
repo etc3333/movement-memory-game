@@ -6,9 +6,14 @@ import './GamePage.css';
 export const GamePage = () => {
 
     return (
-        <div id="title-page-format">
+        <div>
             <div id="right-panel-container">
-                <RightPanel />
+                <div>
+                    <div id="title">
+                        Movement Memory Test
+                    </div>
+                    <RightPanel />
+                </div>
             </div>
         </div>
     )

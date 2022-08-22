@@ -15,7 +15,7 @@ export const DataInfo = () => {
     }
   
     return (
-        <div id="datainfo">
+        <div id="dataInfo">
             <div>
                 
             </div>
@@ -37,7 +37,7 @@ export const DataInfo = () => {
             </div>
             <div>
                 <div>
-                    Highest Level Achieved
+                    High Score
                 </div>
                 <div>
                     {gameData.highScore}

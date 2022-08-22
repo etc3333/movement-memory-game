@@ -46,7 +46,7 @@ export const Canvas = React.memo(({boxDimensions, circleDataArray, stateCallback
             height: data.radius + "px",
             borderRadius: "50%",
             backgroundColor: color,
-            border: "1px solid red",
+            border: "1px solid black",
             position: "absolute",
             top: data.y + "px",
             left: data.x + "px"
