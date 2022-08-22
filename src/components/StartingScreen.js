@@ -18,19 +18,29 @@ export const StartingScreen = ({setBegin}) => {
         } 
     },[]);
 
-    const iconStyle = {
-        color: "white"
+    const beginning = {
+        hidden: {x: "-100vw"},
+        visible: {x: "0px", transition: {duration: 1.5, delayChildren: 1.7}}
+    }
+
+    const ending = {
+        hidden: {opacity: 0},
+        visible: {opacity: 1}
     }
 
     return (
-        <motion.div 
-            id="startingScreen-container"
-            initial={{scale: 0}}
-            animate={{scale: 1}}
-            transition={{duration: 1}}
-        >
-            <div ref={startingScreenRef} id="startingScreen-centerBox-container">
-                <div>
+        <div id="startingScreen-container">
+            <motion.div 
+                ref={startingScreenRef} 
+                id="startingScreen-centerBox-container"
+                variants={beginning}
+                initial="hidden"
+                animate="visible"
+            >
+                <motion.div 
+                    id="startingScreen-words-container"
+                    variants={ending}
+                >
                     <div>
                         <div>
                             Movement Memory Test
@@ -40,15 +50,15 @@ export const StartingScreen = ({setBegin}) => {
                         </div>
                     </div>
                     <div>
-                        <AiTwotoneCheckCircle style={iconStyle}/>
-                        <FiWind style={iconStyle}/>
+                        <AiTwotoneCheckCircle className='startingScreen-icons'/>
+                        <FiWind className='startingScreen-icons' />
                     </div>
                     <div id='start-game-text'>
                         Click to Start Game
                     </div>
-                </div>
-            </div>
-        </motion.div>
+                </motion.div>
+            </motion.div>
+        </div>
     );
 
 };

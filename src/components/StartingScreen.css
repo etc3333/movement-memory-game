@@ -17,16 +17,41 @@
 
 #start-game-text {
     font-size: larger;
-    margin-top: 50px;
 }
 
 #startingScreen-centerBox-container {
-    height: 500px;
-    width: 500px;
+    height: 600px;
+    width: 600px;
     border-radius: 50%;
     background: #fcc729;
     border: solid #bb8f0a;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+#startingScreen-centerBox-container:before {
+    content: "";
+    position: absolute;
+    height: 800px;
+    width: 50px;
+    background: #f3f3f3;
+    box-shadow: 0 0 30px #fff;
+    filter: blur(2px);
+    opacity: .9;
+    transition: .7s;
+    transform: rotate(-35deg)  translatex(-400px);
+}
+
+#startingScreen-centerBox-container:hover:before {
+    transform: rotate(-35deg) translate(350px, 20px);
+}
+
+.startingScreen-icons {
+    color: white;
+    width: 50px;
+    height: 50px;
 }
