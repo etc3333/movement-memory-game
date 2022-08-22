@@ -89,14 +89,11 @@ export const Game = React.memo(({boxDimensions, circleDataArray, stateCallbacks,
 
             activeUpdateCircle.current = true;
 
-            console.log("Timeout 1 finished");
-
             setTimeout(() => {
                 for (let i = 0; i < numberOfTotalCircles; i++) {
                     circleElements[i].addEventListener("click", clickCircle);
                 }
                 activeUpdateCircle.current = false;
-                console.log("Timeout 2 finished");
             }, 2000);
             requestFrameRef.current = requestAnimationFrame(tick);
             
