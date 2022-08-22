@@ -9,7 +9,7 @@
     height: 400px;
     width: 400px;
     border-radius: 50%;
-    background-color: #F7B15C;
+    background-color: #fcc729;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,11 +21,11 @@
 }
 
 #endingScreen-outerRing {
-    height: 550px;
-    width: 550px;
+    height: 640px;
+    width: 640px;
     background-color: transparent;
     border-radius: 50%;
-    border: 10px solid red;
+    border: 20px solid #337def;
     position: relative;
     display: flex;
     justify-content: center;

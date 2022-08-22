@@ -16,7 +16,7 @@ export const Canvas = React.memo(({boxDimensions, circleDataArray, stateCallback
     const boxStyle = {
         width: boxDimensions.width + "px",
         height: boxDimensions.height + "px",
-        backgroundColor: "black"
+        border: "1px solid black"
     };
 
     const renderCircle = circleDataArray.map((data, index)=> createCircle(data, index));
@@ -46,6 +46,7 @@ export const Canvas = React.memo(({boxDimensions, circleDataArray, stateCallback
             height: data.radius + "px",
             borderRadius: "50%",
             backgroundColor: color,
+            border: "1px solid red",
             position: "absolute",
             top: data.y + "px",
             left: data.x + "px"

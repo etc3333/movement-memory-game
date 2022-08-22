@@ -1,4 +1,5 @@
 import { useContext, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 
 import './EndingScreen.css';
 
@@ -28,7 +29,7 @@ export const EndingScreen = ({setBegin, setEnd}) => {
     useEffect(() => {
         function tryAgain() {
             setEnd(false);
-            setGameData(prev => ({level: 1, lives: 3, highScore: score}))
+            setGameData(({level: 1, lives: 3, highScore: score}))
         }
 
         const endCircleRef = endingCircleRef.current;
@@ -40,7 +41,12 @@ export const EndingScreen = ({setBegin, setEnd}) => {
     return (
         <div id="endingScreen-container">
             <div id='endingScreen-outerRing'>
-                <div ref={endingCircleRef} id="endingScreen-centerBox-container">
+                <motion.div 
+                ref={endingCircleRef} 
+                id="endingScreen-centerBox-container"
+                whileHover={{scale: 1.5}}
+                transition={{duration: .7}}
+                >
                     <div id="endingScreen-centerBox">
                         <div>
                             <div>
@@ -50,11 +56,11 @@ export const EndingScreen = ({setBegin, setEnd}) => {
                                 {newHighScore ?  `New High Score: ${gameData.level}` : `High Score: ${storedHighScore}`}
                             </div>
                             <div id="tryAgain-circle">
-                                Try Again
+                                Try Again?
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     )

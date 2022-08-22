@@ -19,7 +19,7 @@ export const StartingScreen = ({setBegin}) => {
     },[]);
 
     const iconStyle = {
-        color: "white",
+        color: "white"
     }
 
     return (

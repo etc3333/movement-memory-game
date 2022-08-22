@@ -24,7 +24,8 @@
     height: 500px;
     width: 500px;
     border-radius: 50%;
-    background: #F7B15C;
+    background: #fcc729;
+    border: solid #bb8f0a;
     display: flex;
     justify-content: center;
     align-items: center;

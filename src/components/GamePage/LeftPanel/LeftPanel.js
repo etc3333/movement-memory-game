@@ -11,8 +11,8 @@ export const LeftPanel = () => {
 
     useEffect(() => {
         controls.start({
-            scale: [1, 1.5, 1.5, 1],
-            rotate: [0, 20, -20, 0],
+            scale: [1, 1.2, 1.2, 1],
+            rotate: [0, 10, -10, 0],
         }
         )
     },[gameData.level]);

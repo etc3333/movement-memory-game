@@ -8,7 +8,8 @@
 }
 
 #rightPanel-centerBox {
-    background-color: rgb(10, 78, 100);
+    background-color: #337def;
+    border: solid #10489c;
     height: 700px;
     width: 600px;
     border-radius: 10%;
@@ -20,16 +21,17 @@
 
 #left-panel-container {
     position: absolute;
-    top: -5%;
-    left: -10%;
+    top: 15%;
+    left: -30%;
 }
 
 #leftPanel-centerBox {
     border-radius: 50%;
-    --radius: 200px;
+    --radius: 250px;
+    border: solid #995a0e;
     width: var(--radius);
     height: var(--radius);
-    background-color: #F7B15C;
+    background-color: #fcc729;
     display: flex;
     justify-content: center;
     align-items: center;

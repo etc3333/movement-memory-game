@@ -15,7 +15,7 @@ export const RightPanel = React.memo(() => {
     const numberOfCorrectCircles = useRef(0);
     const numberOfTotalCircles = useRef(4);
 
-    const allCircleRadius = 20;
+    const allCircleRadius = 30;
 
     useMemo(() => {
         if (numberOfCorrectCircles.current >= numberOfTotalCircles.current / 2) {
