@@ -11,3 +11,6 @@ Possible future edits:
 Update Visual and Animations
 Add Sound Effects
 Update Difficulty
+
+Notes:
+React Strict Mode will cause level difficult to increse twice instead of once due to it running twice. This ONLY occurs in development mode so production is fine.
