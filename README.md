@@ -4,8 +4,7 @@ Description: Circles to memorise will appear in green and then hide themselves f
 Framework: React
 
 Status:
-Game is Functional. 
-Visual and Animations can be improved.
+Game is Functional. Visual and Animations can be improved.
 
 Possible future edits:
 Update Visual and Animations
