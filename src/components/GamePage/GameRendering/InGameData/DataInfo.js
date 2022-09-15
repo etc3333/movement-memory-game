@@ -29,7 +29,7 @@ export const DataInfo = () => {
             </div>
             <div>
                 <div>
-                    Lives
+                    Tries
                 </div>
                 <div>
                     {threeLives}

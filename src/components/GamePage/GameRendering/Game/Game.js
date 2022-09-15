@@ -71,6 +71,7 @@ export const Game = React.memo(({boxDimensions, circleDataArray, stateCallbacks,
                     correctCounter++;
                 }
                 if (numberOfCorrectCircles === correctCounter) {
+                    setNextLives(3);
                     setNextLevel(prev => (prev + 1));
                 }
             } else {
@@ -94,10 +95,10 @@ export const Game = React.memo(({boxDimensions, circleDataArray, stateCallbacks,
                     circleElements[i].addEventListener("click", clickCircle);
                 }
                 activeUpdateCircle.current = false;
-            }, 2000);
+            }, 4500);
             requestFrameRef.current = requestAnimationFrame(tick);
             
-        }, 2000);  
+        }, 3000);  
 
         return () => {
             cancelAnimationFrame(requestFrameRef.current);

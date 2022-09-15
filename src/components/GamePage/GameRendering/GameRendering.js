@@ -19,7 +19,7 @@ export const GameRendering = React.memo(() => {
 
     useMemo(() => {
         if (numberOfCorrectCircles.current >= numberOfTotalCircles.current / 2) {
-            numberOfTotalCircles.current += 4;
+            numberOfTotalCircles.current += 2;
         } else {
             numberOfCorrectCircles.current += 1;
         }

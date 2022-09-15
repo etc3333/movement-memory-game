@@ -42,11 +42,11 @@ export const StartingScreen = ({setBegin}) => {
                     variants={ending}
                 >
                     <div>
-                        <div>
+                        <div id='startingScreen-title'>
                             Movement Memory Test
                         </div>
                         <div id="starting-screen-text-description">
-                            Remember the Designated Circles
+                            (Remember the Designated Circles)
                         </div>
                     </div>
                     <div>

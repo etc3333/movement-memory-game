@@ -1,9 +1,11 @@
 #startingScreen-container {
-    height: 100vh;
+    min-height: 100vh;
+    min-width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: lightblue;
 }
 
 #startingScreen-container:hover {
@@ -13,6 +15,8 @@
 
 #starting-screen-text-description {
     font-style: italic;
+    opacity: .8;
+    font-size: 20px;
 }
 
 #start-game-text {
@@ -56,4 +60,9 @@
     height: 60px;
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+#startingScreen-title {
+    font-size: 45px;
+    margin-bottom: 20px;
 }

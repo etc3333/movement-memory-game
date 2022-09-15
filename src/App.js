@@ -21,7 +21,7 @@ function App() {
 
   const [gameData, setGameData] = useState({
       level: 1,
-      lives: 6,
+      lives: 3,
       highScore: highScore
   });
 

@@ -29,7 +29,7 @@ export const EndingScreen = ({setBegin, setEnd}) => {
     useEffect(() => {
         function tryAgain() {
             setEnd(false);
-            setGameData(({level: 1, lives: 6, highScore: score}))
+            setGameData(({level: 1, lives: 3, highScore: score}))
         }
 
         const endCircleRef = endingCircleRef.current;
