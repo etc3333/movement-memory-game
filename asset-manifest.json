@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/movement-memory-game/static/css/main.f4624c1d.css",
+    "main.js": "/movement-memory-game/static/js/main.b58dc8d7.js",
+    "index.html": "/movement-memory-game/index.html",
+    "main.f4624c1d.css.map": "/movement-memory-game/static/css/main.f4624c1d.css.map",
+    "main.b58dc8d7.js.map": "/movement-memory-game/static/js/main.b58dc8d7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f4624c1d.css",
+    "static/js/main.b58dc8d7.js"
+  ]
+}
