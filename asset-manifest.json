@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/movement-memory-game/static/css/main.f4624c1d.css",
-    "main.js": "/movement-memory-game/static/js/main.a943b29a.js",
+    "main.js": "/movement-memory-game/static/js/main.cf9c70cd.js",
     "index.html": "/movement-memory-game/index.html",
     "main.f4624c1d.css.map": "/movement-memory-game/static/css/main.f4624c1d.css.map",
-    "main.a943b29a.js.map": "/movement-memory-game/static/js/main.a943b29a.js.map"
+    "main.cf9c70cd.js.map": "/movement-memory-game/static/js/main.cf9c70cd.js.map"
   },
   "entrypoints": [
     "static/css/main.f4624c1d.css",
-    "static/js/main.a943b29a.js"
+    "static/js/main.cf9c70cd.js"
   ]
 }
