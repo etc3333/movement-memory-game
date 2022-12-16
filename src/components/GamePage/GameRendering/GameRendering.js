@@ -40,12 +40,13 @@ export const GameRendering = React.memo(() => {
 
     const circleDataArray = useMemo(() => setCircleDataArray(),[nextLevel]);
     function setCircleDataArray() {
+//rdmNumber(-3,3)
         return new Array(numberOfTotalCircles.current).fill(circleDataTemplate).map(value => {
             return {...value,
                 x: rdmNumber(0, boxDimensions.width - allCircleRadius + 1), 
                 y: rdmNumber(0, boxDimensions.height - allCircleRadius + 1), 
-                xSpeed: rdmNumber(-3,3), 
-                ySpeed: rdmNumber(-3,3)
+                xSpeed: 5, 
+                ySpeed: 5
             }
         });
     }
