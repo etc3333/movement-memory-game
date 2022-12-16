@@ -44,8 +44,8 @@ export const GameRendering = React.memo(() => {
             return {...value,
                 x: rdmNumber(0, boxDimensions.width - allCircleRadius + 1), 
                 y: rdmNumber(0, boxDimensions.height - allCircleRadius + 1), 
-                xSpeed: rdmNumber(-2,2), 
-                ySpeed: rdmNumber(-2,2)
+                xSpeed: rdmNumber(-3,3), 
+                ySpeed: rdmNumber(-3,3)
             }
         });
     }
