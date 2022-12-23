@@ -1,19 +1,20 @@
 <b>Simple Moving Memory Game</b>
 
-Front-End: REACT
+<b>Front-End</b>: REACT
 
 
-Description: Circles to memorise will appear in green and then hide themselves from the user. The user will then memorise these green circles as they and other circles bounce around the screen. More balls will be created as the user completes the game.
+<b>Description</b>: 
+> Circles to memorise will appear in green and then hide themselves from the user. The user will then memorise these green circles as they and other circles bounce around the screen. More balls will be created > as the user completes the game.
 
 
 
-Status:
-Game is Functional. Visual and Animations can be improved.
+<b>Status</b>:
+Game is Functional.
 
-Possible future edits:
-Update Visual and Animations
-Add Sound Effects
-Update Difficulty
+<b>Possible future edits</b>:
+> Update Visual and Animations
+> Add Sound Effects
+> Update Difficulty
 
-Notes:
+<b> Notes <b>:
 React Strict Mode will cause level difficult to increse twice instead of once due to it running twice. This ONLY occurs in development mode so production is fine.
