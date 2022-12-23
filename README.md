@@ -11,10 +11,10 @@
 <b>Status</b>:
 Game is Functional.
 
-<b>Possible future edits</b>:
+<b>Future Improvements</b>:
 > Update Visual and Animations
 > Add Sound Effects
 > Update Difficulty
 
 <b> Notes <b>:
-React Strict Mode will cause level difficult to increse twice instead of once due to it running twice. This ONLY occurs in development mode so production is fine.
+> React Strict Mode will cause level difficult to increse twice instead of once due to it running twice. This ONLY occurs in development mode so production is fine.
