@@ -1,4 +1,4 @@
-<b>Simple Moving Memory Game</b>
+<b>Title</b>: Simple Moving Memory Game
 
 <b>Front-End</b>: REACT
 
