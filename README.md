@@ -1,7 +1,11 @@
-Title: Simple Moving Memory Game
+<b>Simple Moving Memory Game</b>
+
+Front-End: REACT
+
+
 Description: Circles to memorise will appear in green and then hide themselves from the user. The user will then memorise these green circles as they and other circles bounce around the screen. More balls will be created as the user completes the game.
 
-Framework: React
+
 
 Status:
 Game is Functional. Visual and Animations can be improved.
